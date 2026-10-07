@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include <vector>
+#include "../LibraryCPP/array.h"
 
 using namespace std;
 
@@ -18,20 +18,28 @@ int main(int argc, char *argv[])
 	if (n < 0) {y = 0;}
 	else {y = static_cast<size_t>(n);}
 
-    vector<int> Arre;
-    Arre.resize(y);
-	for (int i = 0; i < n; ++i){
-		filetask1 >> Arre[i];
-	}
+     Array *Arre = array_create(y);
+
+    for (int i = 0; i < n; ++i) {
+        int value;
+        filetask1 >> value;
+
+        array_set(Arre, i, value);
+    }
+
     int maxSum = 0;
-	for (int i = 0; i + 4 < n; ++i) {
-		int currentSum = 0;
-		for (int j = i; j < i + 5; ++j){
-			currentSum += Arre[j];
-		}
-		if (currentSum > maxSum) {
-			maxSum = currentSum;
-		}
-		}
+
+    for (int i = 0; i + 4 < n; ++i) {
+        int currentSum = 0;
+
+        for (int j = i; j < i + 5; ++j) {
+            currentSum += array_get(Arre, j);
+        }
+
+        if (currentSum > maxSum) {
+            maxSum = currentSum;
+        }
+    }
 	cout << "The maximum sum of 5 adjacent elements: " << maxSum << endl;
+	array_delete(Arre);
 }

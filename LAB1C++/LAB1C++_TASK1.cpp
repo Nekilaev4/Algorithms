@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include <vector>
-#include <algorithm>
+#include "../LibraryCPP/array.h"
 
 using namespace std;
 
@@ -19,30 +18,28 @@ int main(int argc, char *argv[])
 	if (n < 0) {y = 0;}
 	else {y = static_cast<size_t>(n);}
 
-    vector<int> Arre;
-    Arre.resize(y);
-	for (int i = 0; i < n; ++i){
-		filetask1 >> Arre[i];
-	}
+	Array *Arre = array_create(y);
+    for (int i = 0; i < n; ++i) {
+        int value;
+        filetask1 >> value;
+
+        array_set(Arre, i, value);
+    }
+
     short int count2 = 0, count3 = 0, count4 = 0, count5 = 0;
-    for (int num : Arre){
-		if (num == 2) count2++;}
-	Arre.erase(remove(Arre.begin(), Arre.end(), 2), Arre.end());
+   for (size_t i = 0; i < array_size(Arre); ++i) {
+        int num = array_get(Arre, i);
 
-	for (int num : Arre){
-		if (num == 3) count3++;}
-	Arre.erase(remove(Arre.begin(), Arre.end(), 3), Arre.end());
-
-	for (int num : Arre){
-		if (num == 4) count4++;}
-	Arre.erase(remove(Arre.begin(), Arre.end(), 4), Arre.end());
-
-	for (int num : Arre){
-		if (num == 5) count5++;}
-	Arre.erase(remove(Arre.begin(), Arre.end(), 5), Arre.end());
+        if (num == 2) count2++;
+        if (num == 3) count3++;
+        if (num == 4) count4++;
+        if (num == 5) count5++;
+    }
 
 	cout << "Quantity 2: " << count2 << endl;
 	cout << "Quantity 3: " << count3 << endl;
 	cout << "Quantity 4: " << count4 << endl;
 	cout << "Quantity 5: " << count5 << endl;
+
+	array_delete(Arre);
 }
