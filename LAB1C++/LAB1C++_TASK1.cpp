@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include "../LibraryCPP/array.h"
+#include "array.h"
 
 using namespace std;
 
