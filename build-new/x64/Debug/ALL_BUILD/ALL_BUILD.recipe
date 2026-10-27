@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>C:\Users\moshe\Проекты\файлы-универ\Algorithms\build-new\x64\Debug\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\moshe\Проекты\файлы-универ\Algorithms\build-new\LAB2C++\Debug\LAB2C++.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\moshe\Проекты\файлы-универ\Algorithms\build-new\LAB3C++\Debug\LAB3CXX.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\moshe\Проекты\файлы-универ\Algorithms\build-new\LAB1C++\Debug\TASK1.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\moshe\Проекты\файлы-универ\Algorithms\build-new\LAB1C++\Debug\TASK2.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\moshe\Проекты\файлы-универ\Algorithms\build-new\LibraryCPP\Tests\Debug\TestArrayCPP.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\moshe\Проекты\файлы-универ\Algorithms\build-new\LibraryCPP\Tests\Debug\TestListCPP.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\moshe\Проекты\файлы-универ\Algorithms\build-new\LibraryCPP\Tests\Debug\TestQueueCPP.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\moshe\Проекты\файлы-универ\Algorithms\build-new\LibraryCPP\Tests\Debug\TestStackCPP.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\moshe\Проекты\файлы-универ\Algorithms\build-new\LibraryCPP\Tests\Debug\TestVectorCPP.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\moshe\Проекты\файлы-универ\Algorithms\build-new\x64\Debug\ALL_BUILD</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

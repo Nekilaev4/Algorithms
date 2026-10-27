@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Solution>
+	<Configurations>
+		<BuildType Name="Debug"/>
+		<BuildType Name="Release"/>
+		<BuildType Name="MinSizeRel"/>
+		<BuildType Name="RelWithDebInfo"/>
+		<Platform Name="x64"/>
+	</Configurations>
+	<Project Path="ALL_BUILD.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="4ad79471-0674-377e-8c8c-bf16498e9787" DefaultStartup="true">
+		<BuildDependency Project="LAB2C++/LAB2C++.vcxproj"/>
+		<BuildDependency Project="LAB3C++/LAB3CXX.vcxproj"/>
+		<BuildDependency Project="LibraryCPP/LibraryCPP.vcxproj"/>
+		<BuildDependency Project="LAB1C++/TASK1.vcxproj"/>
+		<BuildDependency Project="LAB1C++/TASK2.vcxproj"/>
+		<BuildDependency Project="LibraryCPP/Tests/TestArrayCPP.vcxproj"/>
+		<BuildDependency Project="LibraryCPP/Tests/TestListCPP.vcxproj"/>
+		<BuildDependency Project="LibraryCPP/Tests/TestQueueCPP.vcxproj"/>
+		<BuildDependency Project="LibraryCPP/Tests/TestStackCPP.vcxproj"/>
+		<BuildDependency Project="LibraryCPP/Tests/TestVectorCPP.vcxproj"/>
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+		<Build Solution="Debug|*" Project="false"/>
+		<Build Solution="Release|*" Project="false"/>
+		<Build Solution="MinSizeRel|*" Project="false"/>
+		<Build Solution="RelWithDebInfo|*" Project="false"/>
+	</Project>
+	<Project Path="LAB2C++/LAB2C++.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="353c71eb-b718-3af5-92db-7e0fa9652bd3">
+		<BuildDependency Project="LibraryCPP/LibraryCPP.vcxproj"/>
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="LAB3C++/LAB3CXX.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="1154e1a8-0b86-316d-b24c-954d227cfbe2">
+		<BuildDependency Project="LibraryCPP/LibraryCPP.vcxproj"/>
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="LibraryCPP/LibraryCPP.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="4439b671-336f-300b-993e-396690f83337">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="RUN_TESTS.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="8979fb66-198c-3c18-bfdd-f787a395221a">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+		<Build Solution="Debug|*" Project="false"/>
+		<Build Solution="Release|*" Project="false"/>
+		<Build Solution="MinSizeRel|*" Project="false"/>
+		<Build Solution="RelWithDebInfo|*" Project="false"/>
+	</Project>
+	<Project Path="LAB1C++/TASK1.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="26507dcf-e2c7-3678-a523-15e796a205b8">
+		<BuildDependency Project="LibraryCPP/LibraryCPP.vcxproj"/>
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="LAB1C++/TASK2.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="ddeae45e-10ed-36ee-91df-cb43102242e5">
+		<BuildDependency Project="LibraryCPP/LibraryCPP.vcxproj"/>
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="LibraryCPP/Tests/TestArrayCPP.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="c4b2adfd-01b5-380c-aa40-72c37740689d">
+		<BuildDependency Project="LibraryCPP/LibraryCPP.vcxproj"/>
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="LibraryCPP/Tests/TestListCPP.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="b39cf773-aa73-3ed8-a8cb-6925cb96bccd">
+		<BuildDependency Project="LibraryCPP/LibraryCPP.vcxproj"/>
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="LibraryCPP/Tests/TestQueueCPP.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="124873c1-9d24-3108-a6cf-0aba3e1a9bcb">
+		<BuildDependency Project="LibraryCPP/LibraryCPP.vcxproj"/>
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="LibraryCPP/Tests/TestStackCPP.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="2347b148-2e04-37ba-a41d-5e15a3c039c2">
+		<BuildDependency Project="LibraryCPP/LibraryCPP.vcxproj"/>
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="LibraryCPP/Tests/TestVectorCPP.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="99b2906a-9ca4-3607-95fa-284249174e69">
+		<BuildDependency Project="LibraryCPP/LibraryCPP.vcxproj"/>
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="ZERO_CHECK.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="8f70a8e1-6dc9-3468-867a-b5b55c6e4eba"/>
+</Solution>
