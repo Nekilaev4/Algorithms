@@ -4,12 +4,17 @@
 
 #include "queue.h"
 
+typedef std::vector<std::vector<int>> Graph;
+typedef std::vector<int> Distances;
+typedef std::vector<int> Parents;
+typedef std::vector<int> Path;
+
 bool expand_layer(
     Queue *queue,
-    const std::vector<std::vector<int>>& graph,
-    std::vector<int>& distance_current,
-    const std::vector<int>& distance_other,
-    std::vector<int>& parent_current,
+    const Graph& graph,
+    Distances& distance_current,
+    const Distances& distance_other,
+    Parents& parent_current,
     int& meeting_vertex)
 {
     if (queue_empty(queue))
@@ -77,18 +82,18 @@ bool expand_layer(
     return false;
 }
 
-std::vector<int> find_shortest_path(
-    const std::vector<std::vector<int>>& graph,
+Path find_shortest_path(
+    const Graph& graph,
     int start,
     int finish)
 {
     int vertex_count = static_cast<int>(graph.size());
 
-    std::vector<int> distance_start(vertex_count, -1);
-    std::vector<int> distance_finish(vertex_count, -1);
+    Distances distance_start(vertex_count, -1);
+    Distances distance_finish(vertex_count, -1);
 
-    std::vector<int> parent_start(vertex_count, -1);
-    std::vector<int> parent_finish(vertex_count, -1);
+    Parents parent_start(vertex_count, -1);
+    Parents parent_finish(vertex_count, -1);
 
     Queue *queue_start = queue_create();
     Queue *queue_finish = queue_create();
@@ -126,7 +131,7 @@ std::vector<int> find_shortest_path(
         }
     }
 
-    std::vector<int> path;
+    Path path;
 
     if (meeting_vertex != -1)
     {
@@ -198,7 +203,7 @@ int main(int argc, char *argv[])
         return 0;
     }
 
-    std::vector<std::vector<int>> graph(vertex_count);
+    Graph graph(vertex_count);
 
     int u;
     int v;
@@ -222,8 +227,7 @@ int main(int argc, char *argv[])
         return 0;
     }
 
-    std::vector<int> path =
-        find_shortest_path(graph, start - 1, finish - 1);
+    Path path = find_shortest_path(graph, start - 1, finish - 1);
 
     if (path.empty())
     {

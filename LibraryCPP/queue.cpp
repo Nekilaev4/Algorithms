@@ -37,23 +37,21 @@ void queue_insert(Queue *queue, Data data)
     if (queue->size == capacity)
     {
         size_t new_capacity = capacity * 2;
-        Data *elements = new Data[queue->size];
+        Vector *new_vector = vector_create();
+        vector_resize(new_vector, new_capacity);
 
         for (size_t i = 0; i < queue->size; ++i)
         {
-            elements[i] =
-                vector_get(queue->vector, (queue->head + i) % capacity);
+            Data element = vector_get(
+                queue->vector,
+                (queue->head + i) % capacity
+            );
+
+            vector_set(new_vector, i, element);
         }
 
-        vector_resize(queue->vector, new_capacity);
-
-        for (size_t i = 0; i < queue->size; ++i)
-        {
-            vector_set(queue->vector, i, elements[i]);
-        }
-
-        delete[] elements;
-
+        vector_delete(queue->vector);
+        queue->vector = new_vector;
         queue->head = 0;
         capacity = new_capacity;
     }
